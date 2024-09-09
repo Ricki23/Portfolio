@@ -22,6 +22,7 @@
         }               
     });
 
+
     // TESTIMONIALS CAROUSEL
     $('#testimonials-carousel').owlCarousel({
         loop:true,
@@ -53,3 +54,13 @@
     });   
      
   });
+
+
+    const form = document.querySelector("form");
+    form.addEventListener("submit", (e) => {
+        const email = form.querySelector("input[name='email']").value;
+        if (!email) {
+            e.preventDefault();
+            alert("Please provide an email.");
+        }
+    });
